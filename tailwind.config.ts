@@ -47,6 +47,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom Easy World Colors
+        magenta: {
+          DEFAULT: "hsl(var(--magenta))",
+          foreground: "hsl(var(--magenta-foreground))",
+        },
+        "dark-blue": {
+          DEFAULT: "hsl(var(--dark-blue))",
+          foreground: "hsl(var(--dark-blue-foreground))",
+        },
+        "light-blue": "hsl(var(--light-blue))",
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +69,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+        display: ['Montserrat', 'ui-sans-serif', 'system-ui'],
+        body: ['Lato', 'ui-sans-serif', 'system-ui'],
       },
       borderRadius: {
         lg: "var(--radius)",
