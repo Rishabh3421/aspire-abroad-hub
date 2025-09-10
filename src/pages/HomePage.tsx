@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import CountryCard from '@/components/CountryCard';
 import EnquiryForm from '@/components/EnquiryForm';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import { 
   GraduationCap, 
   Briefcase, 
@@ -20,8 +21,8 @@ import {
   Clock,
   MapPin
 } from 'lucide-react';
-import heroBackground from '@/assets/hero-background.jpg';
-import managingDirector from '@/assets/managing-director.jpg';
+import heroBackground from '@/assets/hero-background-professional.jpg';
+import managingDirector from '@/assets/managing-director-new.jpg';
 import ukImage from '@/assets/countries/uk.jpg';
 import canadaImage from '@/assets/countries/canada.jpg';
 import australiaImage from '@/assets/countries/australia.jpg';
@@ -127,7 +128,7 @@ const HomePage: React.FC = () => {
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 to-primary/60" />
         
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -157,7 +158,7 @@ const HomePage: React.FC = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="cta" size="xl" className="animate-float">
+                <Button variant="default" size="xl" className="bg-accent hover:bg-accent/90 animate-float">
                   Apply Now
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -299,27 +300,27 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-display font-bold mb-4">
+            <h2 className="text-4xl font-display font-bold text-primary mb-4">
               Why Choose Easy World?
             </h2>
-            <p className="text-xl opacity-90">
+            <p className="text-xl text-muted-foreground">
               Your success is our commitment
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
-              <div key={index} className="text-center animate-scale-in">
-                <div className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6">
-                  <item.icon className="w-10 h-10" />
+              <div key={index} className="text-center animate-scale-in bg-white p-8 rounded-lg shadow-soft">
+                <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <item.icon className="w-10 h-10 text-accent" />
                 </div>
-                <h3 className="text-xl font-display font-semibold mb-3">
+                <h3 className="text-xl font-display font-semibold mb-3 text-primary">
                   {item.title}
                 </h3>
-                <p className="opacity-90 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -373,7 +374,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
+      <section className="py-20 bg-gradient-to-r from-primary to-primary/90 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-4xl lg:text-5xl font-display font-bold">
@@ -386,9 +387,13 @@ const HomePage: React.FC = () => {
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary">
                 Book Free Consultation
               </Button>
-              <Button variant="secondary" size="xl">
+              <WhatsAppButton
+                phoneNumber="919050519168"
+                message="Hello! I would like to book a free consultation for visa services. Please let me know the available time slots."
+                className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg"
+              >
                 Call Now: 9050519168
-              </Button>
+              </WhatsAppButton>
             </div>
           </div>
         </div>

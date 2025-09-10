@@ -55,9 +55,13 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
-                EW
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="w-12 h-12 group-hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/src/assets/easy-world-logo.png" 
+                  alt="Easy World Educational Consultant" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <h1 className="font-display font-bold text-xl text-primary leading-tight">
